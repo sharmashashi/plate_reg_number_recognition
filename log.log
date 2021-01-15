@@ -1,0 +1,530 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:00:42 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:20:40 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:21:11 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:21:41 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+[11, 77, 109]
+[11, 77, 109]
+[13, 45]
+[13, 45]
+[8, 47, 78, 109]
+[8, 47, 78, 109]
+[16]
+[16]
+[8, 50, 79, 78, 109]
+[8, 50, 78, 79, 109]
+[]
+[]
+[8, 79, 108]
+[8, 79, 108]
+[52]
+[52]
+[9, 41, 79, 106]
+[9, 41, 79, 106]
+[55]
+[55]
+[13]
+[13]
+[76, 108, 43]
+[43, 76, 108]
+[16]
+[16]
+[74, 42, 106]
+[42, 74, 106]
+[21, 98, 97]
+[21, 97, 98]
+[103, 72, 40]
+[40, 72, 103]
+[24, 99]
+[24, 99]
+[69, 39]
+[39, 69]
+[60, 100, 78]
+[60, 78, 100]
+[38, 66]
+[38, 66]
+[62, 100, 79]
+[62, 79, 100]
+[37, 64]
+[37, 64]
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:25:32 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:25:46 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:26:29 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:27:07 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:27:15 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+[68, 82]
+[68, 82]
+[28, 51, 79, 78, 23]
+[23, 28, 51, 78, 79]
+[78, 72]
+[72, 78]
+[33, 21, 53, 78, 86]
+[21, 33, 53, 78, 86]
+[77, 73]
+[73, 77]
+[38, 27, 78, 92, 109, 22, 56]
+[22, 27, 38, 56, 78, 92, 109]
+[68, 82]
+[68, 82]
+[24, 98, 110, 78, 58, 43]
+[24, 43, 58, 78, 98, 110]
+[87, 64]
+[64, 87]
+[61, 103, 77, 27, 48]
+[27, 48, 61, 77, 103]
+[87, 86]
+[86, 87]
+[19, 62, 77, 50, 102, 25, 72, 23, 88]
+[19, 23, 25, 50, 62, 72, 77, 88, 102]
+[103, 77, 20, 48]
+[20, 48, 77, 103]
+[21, 58]
+[21, 58]
+[76, 21, 102]
+[21, 76, 102]
+[47, 53, 19]
+[19, 47, 53]
+[97, 75, 45, 16]
+[16, 45, 75, 97]
+[]
+[]
+[101]
+[101]
+[14, 45, 42, 93, 81]
+[14, 42, 45, 81, 93]
+[12, 102, 40]
+[12, 40, 102]
+[69, 89]
+[69, 89]
+[272, 339, 203, 250, 56]
+[56, 203, 250, 272, 339]
+[354, 333, 393, 328, 472, 344, 310, 466, 374, 66]
+[66, 310, 328, 333, 344, 354, 374, 393, 466, 472]
+[199, 55, 320, 252]
+[55, 199, 252, 320]
+[149, 349, 340, 358, 375]
+[149, 340, 349, 358, 375]
+[189, 391, 329, 57, 375, 254]
+[57, 189, 254, 329, 375, 391]
+[346, 360, 353, 175]
+[175, 346, 353, 360]
+[360, 60, 336, 180, 256]
+[60, 180, 256, 336, 360]
+[355, 194, 350]
+[194, 350, 355]
+[173, 465, 261, 461, 341, 258]
+[173, 258, 261, 341, 461, 465]
+[206, 353, 66]
+[66, 206, 353]
+[60, 208, 248]
+[60, 208, 248]
+[371, 326, 338, 391, 448, 349, 461, 298, 160]
+[160, 298, 326, 338, 349, 371, 391, 448, 461]
+[67, 214, 247]
+[67, 214, 247]
+[458, 316, 154, 386, 343, 287, 441, 331]
+[154, 287, 316, 331, 343, 386, 441, 458]
+[221, 76, 267]
+[76, 221, 267]
+[244, 275, 246, 380, 438, 306, 335]
+[244, 246, 275, 306, 335, 380, 438]
+[227, 88]
+[88, 227]
+[372, 262]
+[262, 372]
+[102, 234]
+[102, 234]
+[250]
+[250]
+[239, 148, 115]
+[115, 148, 239]
+[241, 242, 238]
+[238, 241, 242]
+[68, 82]
+[68, 82]
+[28, 51, 79, 78, 23]
+[23, 28, 51, 78, 79]
+[78, 72]
+[72, 78]
+[33, 21, 53, 78, 86]
+[21, 33, 53, 78, 86]
+[77, 73]
+[73, 77]
+[38, 27, 78, 92, 109, 22, 56]
+[22, 27, 38, 56, 78, 92, 109]
+[68, 82]
+[68, 82]
+[24, 98, 110, 78, 58, 43]
+[24, 43, 58, 78, 98, 110]
+[87, 64]
+[64, 87]
+[61, 103, 77, 27, 48]
+[27, 48, 61, 77, 103]
+[87, 86]
+[86, 87]
+[19, 62, 77, 50, 102, 25, 72, 23, 88]
+[19, 23, 25, 50, 62, 72, 77, 88, 102]
+[103, 77, 20, 48]
+[20, 48, 77, 103]
+[21, 58]
+[21, 58]
+[76, 21, 102]
+[21, 76, 102]
+[47, 53, 19]
+[19, 47, 53]
+[97, 75, 45, 16]
+[16, 45, 75, 97]
+[]
+[]
+[101]
+[101]
+[14, 45, 42, 93, 81]
+[14, 42, 45, 81, 93]
+[12, 102, 40]
+[12, 40, 102]
+[69, 89]
+[69, 89]
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:38:00 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:38:12 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:38:24 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:38:33 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:38:49 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:38:53 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+[86]
+[86]
+[24, 87, 77, 102, 72, 49]
+[24, 49, 72, 77, 87, 102]
+[86]
+[86]
+[24, 87, 77, 102, 72, 49]
+[24, 49, 72, 77, 87, 102]
+[35, 99, 74, 123]
+[35, 74, 99, 123]
+[61, 20, 101, 142]
+[20, 61, 101, 142]
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:42:23 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:42:28 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:42:33 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:44:42 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:44:54 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:45:00 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:45:04 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:45:17 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:45:22 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:45:25 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:45:29 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:45:41 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:45:46 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:45:56 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:46:01 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:46:11 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:46:18 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:46:25 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:47:51 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:48:09 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:48:13 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:48:34 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:48:38 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:49:07 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 15, 2021 - 06:49:15 PM
+Django version 3.1.1, using settings 'numberplatedetection.settings'
+Starting development server at http://192.168.1.67:8000/
+Quit the server with CONTROL-C.
