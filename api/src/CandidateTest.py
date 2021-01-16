@@ -5,6 +5,7 @@ from scipy.signal import find_peaks_cwt
 
 
 class CandidateTest:
+    
 
     # compare reversed and normal y coordinate, if normal is higher increase it to max height to
     # identify that it is our peak. If normal is lower make it 0
@@ -41,9 +42,24 @@ class CandidateTest:
         return no_of_intersection
     # row and column profiling to make sure candidate is license number plate
 
+    def sharpenImage(self, image):
+        kernel = np.array([[-1, -1, -1],
+                           [-1, 9, -1],
+                           [-1, -1, -1]])
+        sharpened = cv2.filter2D(image, -1, kernel)
+        return sharpened
+
+    def prepare_image(self, image):
+        # image = self.sharpenImage(image)
+        b_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        ret, bin_image = cv2.threshold(b_image, 140, 255, cv2.THRESH_BINARY)
+        return bin_image
+
     def profile_test(self, candidate_image_path):
-        candidate_image = cv2.resize(cv2.imread(
-            candidate_image_path, cv2.IMREAD_UNCHANGED), (400, 300))
+        cropped = cv2.resize(cv2.imread(
+            candidate_image_path), (400, 300))
+        candidate_image = self.prepare_image(cropped)
+
         rows, columns = candidate_image.shape
         height = rows
         width = columns

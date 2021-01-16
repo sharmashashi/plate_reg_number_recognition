@@ -2,7 +2,8 @@ import cv2
 import numpy as np
 import os
 from matplotlib import pyplot as plt
-from .CandidateTest import CandidateTest
+from CandidateTest import CandidateTest
+import imutils
 
 
 class Localization:
@@ -54,33 +55,68 @@ class Localization:
     # return the resized image
         return resized
 
+    def find_contour(self):
+        print("")
+
+    def rotate(self, img, rect):
+        # self.showImage("lfjdsk", img)
+
+        (x, y), (width, height), angle = rect
+        if angle>45:
+            rotation_angle = angle-90
+        else:
+            rotation_angle = angle
+        rows, cols = img.shape[0], img.shape[1]
+        M = cv2.getRotationMatrix2D((cols/2, rows/2), rotation_angle, 1)
+        img_rot = cv2.warpAffine(img, M, (cols, rows))
+
+    # # rotate bounding box
+    #     rect0 = (rect[0], rect[1], 0.0)
+    #     box = cv2.boxPoints(rect0)
+    #     pts = np.int0(cv2.transform(np.array([box]), M))[0]
+    #     pts[pts < 0] = 0
+
+    # # crop
+    #     img_crop = img_rot[pts[1][1]:pts[0][1],
+    #                        pts[1][0]:pts[2][0]]
+
+        return img_rot
+
+    def fit_min_area(self, cntr, cnt_img):
+        rect = cv2.minAreaRect(cntr)
+        box = cv2.boxPoints(rect)
+        box = np.int0(box)
+        cv2.drawContours(cnt_img, [box], -1, (0, 0, 255), 1)
+
+        rotated = self.rotate(cnt_img, rect)
+        # self.showImage("lkfd", rotated)
+        return rotated
+
     def localize(self, imagePath):
         # imreads always takes image in rgb color format
         bgr_image = self.image_resize(cv2.imread(
             imagePath), width=1200)
-        # first convert the format to hsv(Hue saturation and value)
-        hsvImage = cv2.cvtColor(bgr_image, cv2.COLOR_BGR2HSV)
-        # self.showImage("hsv",hsvImage)
+
+        averaging = cv2.blur(bgr_image, (5, 5))
+        # bilateral = cv2.bilateralFilter(bgr_image,3,15,15)
+        hsvImage = cv2.cvtColor(averaging, cv2.COLOR_BGR2HSV)
+
         # lower starting color bound for red in hsv spectrum
-        lower_red1 = np.array([0, 100, 100])
+        lower_red1 = np.array([0, 70, 50])
         # upper bound for red in hsv spectrum
         upper_red1 = np.array([10, 255, 255])
-        lower_red2 = np.array([160, 100, 100])
-        upper_red2 = np.array([179, 255, 255])
+        lower_red2 = np.array([170, 70, 50])
+        upper_red2 = np.array([180, 255, 255])
 
         mask1 = cv2.inRange(hsvImage, lower_red1, upper_red1)
         mask2 = cv2.inRange(hsvImage, lower_red2, upper_red2)
         mask = cv2.bitwise_xor(mask1, mask2)
         masked_image = cv2.bitwise_and(bgr_image, bgr_image, mask=mask)
-        # gives masked image that only shows red area
-        # self.showImage("masked Image", masked_image)
 
         # convert to binary image before finding contours
+
         ret, binary_image = cv2.threshold(
             masked_image, 0, 255, cv2.THRESH_BINARY)
-        # self.showImage("binary image",binary_image)
-
-        # edge detection
 
         # canny edge detection
         canny_edge = cv2.Canny(binary_image, 127, 255)
@@ -91,12 +127,11 @@ class Localization:
             canny_edge, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
         contour_image = np.zeros_like(bgr_image)
         # print(contours)
-        cv2.drawContours(contour_image, contours, -1, (0, 255, 0), 2)
+        cv2.drawContours(contour_image, contours, -1, (0, 255, 0), 1)
         # self.showImage("contours", contour_image)
-        _candidateTest = CandidateTest()
 
-        for each in os.listdir("api/src/cropped_images"):
-            os.remove("api/src/cropped_images/"+each)
+        for each in os.listdir("cropped_images"):
+            os.remove("cropped_images/"+each)
         i = 1
         for cntr in contours:
             x, y, w, h = cv2.boundingRect(cntr)
@@ -104,12 +139,13 @@ class Localization:
             # select rectangles only. Works on images with numberplates laid out horizontally
             if w > 80 and h > 50:
                 cropped_image = bgr_image[y:y+h, x:x+w]
-                # convert it to gray image for feature analysis
-                b_image = cv2.cvtColor(cropped_image, cv2.COLOR_BGR2GRAY)
 
-                ret, bin_image = cv2.threshold(
-                    b_image, 150, 255, cv2.THRESH_BINARY)
-                cv2.imwrite('api/src/cropped_images/image_'+str(i)+'.png',
-                            bin_image)
+                rotated= self.fit_min_area(cntr, cnt_img=cropped_image)
+                # self.showImage("rotated",rotated)
+                # b_image = cv2.cvtColor(rotated, cv2.COLOR_BGR2GRAY)
+                # ret, bin_image = cv2.threshold(
+                #     b_image, 140, 255, cv2.THRESH_BINARY)
+                cv2.imwrite('cropped_images/image_'+str(i)+'.png',
+                            rotated)
                 i = i+1
-        return "api/src/cropped_images/"
+        return "cropped_images/"

@@ -6,9 +6,9 @@
 import os
 import matplotlib.pyplot as plt
 import numpy as np
-from .FeatureExtractor import FeatureExtractor
-from .Classifier import Classifier
-FEATURELABELDIR = "api/src/svm_classification/Calculated Feature and Label/"
+from svm_classification. FeatureExtractor import FeatureExtractor
+from svm_classification.Classifier import Classifier
+FEATURELABELDIR = "svm_classification/Calculated Feature and Label/"
 
 # calculates feature vector and saves as file along with
 # label for each character
@@ -20,7 +20,7 @@ def save_feature():
     for each_character in os.listdir("train"):
         feature_matrix = []
         feature_label = []
-        each_character_dir = "api/src/svm_classification/train/"+each_character
+        each_character_dir = "svm_classification/train/"+each_character
         for char_image in os.listdir(each_character_dir):
             char_image_path = each_character_dir+"/"+char_image
             vec = FeatureExtractor.hog_feature_extractor(char_image_path)
@@ -54,7 +54,7 @@ def start_prediction():
 
     # # get test images
     test_image_feature_matrix = []
-    test_dir = "api/src/MERGED/merged/"
+    test_dir = "MERGED/merged/"
     charactercounts = 0
     for each in os.listdir(test_dir):
         charactercounts += 1

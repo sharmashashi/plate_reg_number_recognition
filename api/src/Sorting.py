@@ -41,9 +41,9 @@ class Sorting:
                 else:
                     break
             sortedimages.append(int(number))
-        print(sortedimages)
+        # print(sortedimages)
         sortedimages = self.bubbleSort(sortedimages)
-        print(sortedimages)
+        # print(sortedimages)
 
         sortedimagefiles = []
         i = 0
@@ -76,19 +76,19 @@ class Sorting:
 
     def sort(self, imagepath, separator_y,finalpath):
         #
-        self.clearDir("api/src/top_row/")
-        self.clearDir("api/src/bottom_row/")
+        self.clearDir("top_row/")
+        self.clearDir("bottom_row/")
         #
         for each in os.listdir(imagepath):
             x, y = self.coordinate_from_name(each)
             if y <= separator_y:
-                cv2.imwrite("api/src/top_row/"+str(x)+".png",
+                cv2.imwrite("top_row/"+str(x)+".png",
                             cv2.imread(imagepath+"/"+each))
             else:
-                cv2.imwrite("api/src/bottom_row/"+str(x)+".png",
+                cv2.imwrite("bottom_row/"+str(x)+".png",
                             cv2.imread(imagepath+"/"+each))
 
-        self.generatesortedrow("api/src/top_row/")
-        self.generatesortedrow("api/src/bottom_row/")
-        self.merge("api/src/top_row/", "api/src/bottom_row/",finalpath)
+        self.generatesortedrow("top_row/")
+        self.generatesortedrow("bottom_row/")
+        self.merge("top_row/", "bottom_row/",finalpath)
         return finalpath
