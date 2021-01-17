@@ -47,7 +47,7 @@ def start():
 
     #
     #
-    reg_number=clf.start_prediction()
+    reg_number = clf.start_prediction()
     return reg_number
 
 

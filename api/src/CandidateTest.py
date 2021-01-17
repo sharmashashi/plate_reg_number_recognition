@@ -5,10 +5,19 @@ from scipy.signal import find_peaks_cwt
 
 
 class CandidateTest:
-    
+
+    def showImage(self, windowName, image):
+        cv2.namedWindow(windowName, cv2.WINDOW_NORMAL)
+        cv2.resizeWindow(windowName, 600, 600)
+
+        cv2.imshow(windowName, image)
+
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
 
     # compare reversed and normal y coordinate, if normal is higher increase it to max height to
     # identify that it is our peak. If normal is lower make it 0
+
     def better_peak_data(self, normal, reverse, x, height):
         y = []
 
@@ -42,15 +51,7 @@ class CandidateTest:
         return no_of_intersection
     # row and column profiling to make sure candidate is license number plate
 
-    def sharpenImage(self, image):
-        kernel = np.array([[-1, -1, -1],
-                           [-1, 9, -1],
-                           [-1, -1, -1]])
-        sharpened = cv2.filter2D(image, -1, kernel)
-        return sharpened
-
     def prepare_image(self, image):
-        # image = self.sharpenImage(image)
         b_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         ret, bin_image = cv2.threshold(b_image, 140, 255, cv2.THRESH_BINARY)
         return bin_image
@@ -75,9 +76,9 @@ class CandidateTest:
                 sum = sum + candidate_image[i][j]
             x_avg_normal.append(sum/height)
             x_avg_reverse.append(((height/2)-(sum/height)))
-        # plt.plot(y_col, x_avg_normal)
-        # plt.plot(y_col, x_avg_reverse)
-        # plt.show()
+        plt.plot(y_col, x_avg_normal)
+        plt.plot(y_col, x_avg_reverse)
+        plt.show()
 
         vertical_cut = self.better_peak_data(
             x_avg_normal, x_avg_reverse, y_col, height)

@@ -4,6 +4,7 @@ import os
 from matplotlib import pyplot as plt
 from CandidateTest import CandidateTest
 import imutils
+import math as math 
 
 
 class Localization:
@@ -55,32 +56,22 @@ class Localization:
     # return the resized image
         return resized
 
-    def find_contour(self):
-        print("")
-
     def rotate(self, img, rect):
         # self.showImage("lfjdsk", img)
 
         (x, y), (width, height), angle = rect
+        # print(angle)
         if angle>45:
             rotation_angle = angle-90
         else:
             rotation_angle = angle
         rows, cols = img.shape[0], img.shape[1]
         M = cv2.getRotationMatrix2D((cols/2, rows/2), rotation_angle, 1)
-        img_rot = cv2.warpAffine(img, M, (cols, rows))
-
-    # # rotate bounding box
-    #     rect0 = (rect[0], rect[1], 0.0)
-    #     box = cv2.boxPoints(rect0)
-    #     pts = np.int0(cv2.transform(np.array([box]), M))[0]
-    #     pts[pts < 0] = 0
-
-    # # crop
-    #     img_crop = img_rot[pts[1][1]:pts[0][1],
-    #                        pts[1][0]:pts[2][0]]
-
+        img_rot = cv2.warpAffine(img, M, (cols, rows),borderValue=(0,0,0))
+       
         return img_rot
+
+        
 
     def fit_min_area(self, cntr, cnt_img):
         rect = cv2.minAreaRect(cntr)
@@ -96,6 +87,7 @@ class Localization:
         # imreads always takes image in rgb color format
         bgr_image = self.image_resize(cv2.imread(
             imagePath), width=1200)
+        
 
         averaging = cv2.blur(bgr_image, (5, 5))
         # bilateral = cv2.bilateralFilter(bgr_image,3,15,15)
@@ -112,6 +104,7 @@ class Localization:
         mask2 = cv2.inRange(hsvImage, lower_red2, upper_red2)
         mask = cv2.bitwise_xor(mask1, mask2)
         masked_image = cv2.bitwise_and(bgr_image, bgr_image, mask=mask)
+        # self.showImage("aldfkjsdlfj",masked_image)
 
         # convert to binary image before finding contours
 
