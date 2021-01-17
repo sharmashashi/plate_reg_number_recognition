@@ -76,9 +76,9 @@ class CandidateTest:
                 sum = sum + candidate_image[i][j]
             x_avg_normal.append(sum/height)
             x_avg_reverse.append(((height/2)-(sum/height)))
-        plt.plot(y_col, x_avg_normal)
-        plt.plot(y_col, x_avg_reverse)
-        plt.show()
+        # plt.plot(y_col, x_avg_normal)
+        # plt.plot(y_col, x_avg_reverse)
+        # plt.show()
 
         vertical_cut = self.better_peak_data(
             x_avg_normal, x_avg_reverse, y_col, height)

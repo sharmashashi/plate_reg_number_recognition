@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-import Localization as loc
+import api.src.Localization as loc
 import os
 
 
@@ -69,8 +69,8 @@ class Segmentation:
         contour_image = np.zeros_like(plate_img)
         cv2.drawContours(contour_image, contours, -1, (0, 255, 0), 1)
 
-        for each in os.listdir("segmented_images"):
-            os.remove("segmented_images/"+each)
+        for each in os.listdir("api/src/segmented_images"):
+            os.remove("api/src/segmented_images/"+each)
         i = 1
         divider_ycoordinate = 0
         for cntr in contours:
@@ -90,7 +90,7 @@ class Segmentation:
                 #     b_image, 150, 255, cv2.THRESH_BINARY)
                 # print(cv2.contourArea(cntr))
                 # self.showImage("dlskfj;slkjf",cropped_image)
-                cv2.imwrite('segmented_images/'+str(x)+'_'+str(y)+'.png',
+                cv2.imwrite('api/src/segmented_images/'+str(x)+'_'+str(y)+'.png',
                             cropped_image)
                 i = i+1
         return divider_ycoordinate

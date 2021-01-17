@@ -1,12 +1,12 @@
 from sklearn import svm
-from Localization import Localization
-from CandidateTest import CandidateTest
-from Segmentation import Segmentation
-from Sorting import Sorting
+from .Localization import Localization
+from .CandidateTest import CandidateTest
+from .Segmentation import Segmentation
+from .Sorting import Sorting
 import numpy as np
 import os
 import cv2
-import svm_classification.classification as clf
+import api.src.svm_classification.classification as clf
 
 
 def rotate_image(image, angle):
@@ -19,7 +19,7 @@ def rotate_image(image, angle):
 
 def segment_and_sort(finalpath):
     seg = Segmentation()
-    separator_ycoordinate = seg.segmentation("candidate_image/plate.png")
+    separator_ycoordinate = seg.segmentation("api/src/candidate_image/plate.png")
     sort = Sorting()
     segmented_dir = sort.sort(
         "segmented_images", separator_ycoordinate, finalpath=finalpath)
@@ -32,8 +32,8 @@ def start():
 
     _candidateTest = CandidateTest()
     # remove images from candidate dir
-    for each in os.listdir("candidate_image"):
-        os.remove("candidate_image/"+each)
+    for each in os.listdir("api/src/candidate_image"):
+        os.remove("api/src/candidate_image/"+each)
 
     # do iterative profile test and choose  one image for candidate
     for image_name in os.listdir(cropped_image_dir):
@@ -41,15 +41,12 @@ def start():
             cropped_image_dir+image_name)
         if is_candidate:
             image = cv2.imread(cropped_image_dir+image_name)
-            cv2.imwrite("candidate_image/"+"plate.png", image)
+            cv2.imwrite("api/src/candidate_image/"+"plate.png", image)
 
-    segment_and_sort(finalpath="MERGED/merged/")
+    segment_and_sort(finalpath="api/src/MERGED/merged/")
 
     #
     #
     reg_number = clf.start_prediction()
     return reg_number
 
-
-if __name__ == "__main__":
-    print(start())

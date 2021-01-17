@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 from matplotlib import pyplot as plt
-from CandidateTest import CandidateTest
+from .CandidateTest import CandidateTest
 import imutils
 import math as math 
 
@@ -123,8 +123,8 @@ class Localization:
         cv2.drawContours(contour_image, contours, -1, (0, 255, 0), 1)
         # self.showImage("contours", contour_image)
 
-        for each in os.listdir("cropped_images"):
-            os.remove("cropped_images/"+each)
+        for each in os.listdir("api/src/cropped_images"):
+            os.remove("api/src/cropped_images/"+each)
         i = 1
         for cntr in contours:
             x, y, w, h = cv2.boundingRect(cntr)
@@ -138,7 +138,7 @@ class Localization:
                 # b_image = cv2.cvtColor(rotated, cv2.COLOR_BGR2GRAY)
                 # ret, bin_image = cv2.threshold(
                 #     b_image, 140, 255, cv2.THRESH_BINARY)
-                cv2.imwrite('cropped_images/image_'+str(i)+'.png',
+                cv2.imwrite('api/src/cropped_images/image_'+str(i)+'.png',
                             rotated)
                 i = i+1
-        return "cropped_images/"
+        return "api/src/cropped_images/"
