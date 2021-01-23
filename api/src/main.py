@@ -22,7 +22,7 @@ def segment_and_sort(finalpath):
     separator_ycoordinate = seg.segmentation("api/src/candidate_image/plate.png")
     sort = Sorting()
     segmented_dir = sort.sort(
-        "segmented_images", separator_ycoordinate, finalpath=finalpath)
+        "api/src/segmented_images", separator_ycoordinate, finalpath=finalpath)
 
 
 def start():
